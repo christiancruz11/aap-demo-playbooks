@@ -1,0 +1,9 @@
+---
+- name: Playbook to Display Text Message
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Display the input message text
+      ansible.builtin.debug:
+        msg: "{{ display_message_text | default('Allowed to run Ansible Job Template') }}"
